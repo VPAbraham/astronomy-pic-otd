@@ -22,5 +22,6 @@ export default {
 <style lang="scss">
 .home {
   color: white;
+  display: flex;
 }
 </style>
