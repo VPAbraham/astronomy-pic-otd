@@ -1,18 +1,46 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Display />
+    <section class="date-selector">
+      <template>
+        <b-field class="nav" label="Choose a date to view a different picture.">
+          <b-datepicker
+            placeholder="Type or select a date..."
+            icon="calendar-today"
+            editable
+          >
+          </b-datepicker>
+        </b-field>
+      </template>
+    </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+// import HelloWorld from "@/components/HelloWorld.vue";
+import Display from "@/components/Display.vue";
 export default {
   name: "home",
   components: {
-    HelloWorld
+    Display,
   }
 };
 </script>
+
+<style lang="scss">
+.home {
+  color: white;
+}
+.date-selector{
+  width: 30%;
+  background: rgb(199, 199, 199);
+  height: 7vh;
+  border-radius: 8px;
+}
+
+.nav {
+  color: rgb(202, 202, 202);
+  width: 95%;
+  margin: auto;
+}
+</style>
