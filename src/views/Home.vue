@@ -1,13 +1,26 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <Display />
+    <Nav />
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
+import Display from "@/components/Display.vue";
+import Nav from "@/components/Nav.vue";
 
 export default {
   name: "home",
-  components: {}
+  components: {
+    Display,
+    Nav
+  }
 };
 </script>
+
+<style lang="scss">
+.home {
+  color: white;
+}
+</style>
