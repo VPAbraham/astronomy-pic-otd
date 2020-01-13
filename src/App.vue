@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
 * {
   box-sizing: border-box;
   margin: 0;
