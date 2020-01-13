@@ -13,6 +13,9 @@ export default {
   components: {
     Home,
     Header
+  },
+  mounted() {
+    console.log(process.env.VUE_APP_NASA_API_URL);
   }
 };
 </script>
