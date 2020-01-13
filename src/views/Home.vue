@@ -1,20 +1,28 @@
 <template>
   <div class="home">
     <Display />
-    <Nav />
+    <section class="date-selector">
+      <template>
+        <b-field class="nav" label="Choose a date to view a different picture.">
+          <b-datepicker
+            placeholder="Type or select a date..."
+            icon="calendar-today"
+            editable
+          >
+          </b-datepicker>
+        </b-field>
+      </template>
+    </section>
   </div>
 </template>
 
 <script>
 // import HelloWorld from "@/components/HelloWorld.vue";
 import Display from "@/components/Display.vue";
-import Nav from "@/components/Nav.vue";
-
 export default {
   name: "home",
   components: {
     Display,
-    Nav
   }
 };
 </script>
@@ -22,6 +30,17 @@ export default {
 <style lang="scss">
 .home {
   color: white;
-  display: flex;
+}
+.date-selector{
+  width: 30%;
+  background: rgb(199, 199, 199);
+  height: 7vh;
+  border-radius: 8px;
+}
+
+.nav {
+  color: rgb(202, 202, 202);
+  width: 95%;
+  margin: auto;
 }
 </style>
