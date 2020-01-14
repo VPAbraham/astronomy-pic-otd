@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Display />
+    <Display imageUrl="this.currentPhoto" />
     <section class="date-selector">
       <template>
         <datetime v-model="selectedDate"></datetime>
@@ -10,9 +10,9 @@
 </template>
 
 <script>
-// import HelloWorld from "@/components/HelloWorld.vue";
 import { Datetime } from "vue-datetime";
 import Display from "@/components/Display.vue";
+import { getPhoto } from "@/apiCalls.js";
 export default {
   name: "home",
   components: {
@@ -22,12 +22,19 @@ export default {
   data: function() {
     return {
       selectedDate: null,
-      number: 1
+      currentPhoto: ""
     };
+  },
+  mounted() {
+    getPhoto()
+      .then(res => (this.currentPhoto = res))
+      .catch(error => console.error(error));
   },
   watch: {
     selectedDate: function(val) {
-      console.log(val);
+      getPhoto(val)
+        .then(res => (this.currentPhoto = res))
+        .catch(error => console.error(error));
     }
   }
 };
