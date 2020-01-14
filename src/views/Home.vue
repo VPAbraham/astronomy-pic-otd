@@ -4,15 +4,6 @@
     <section class="date-selector">
       <template>
         <datetime v-model="selectedDate"></datetime>
-        <!-- <b-field class="nav" label="Choose a date to view a different picture.">
-          <b-datepicker
-            placeholder="Type or select a date..."
-            icon="calendar-today"
-            editable
-            v-model="selectedDate"
-          >
-          </b-datepicker>
-        </b-field> -->
       </template>
     </section>
   </div>
@@ -20,7 +11,7 @@
 
 <script>
 // import HelloWorld from "@/components/HelloWorld.vue";
-import { Datetime } from 'vue-datetime';
+import { Datetime } from "vue-datetime";
 import Display from "@/components/Display.vue";
 export default {
   name: "home",
@@ -30,9 +21,14 @@ export default {
   },
   data: function() {
     return {
-      selectedDate: [],
+      selectedDate: null,
       number: 1
     };
+  },
+  watch: {
+    selectedDate: function(val) {
+      console.log(val);
+    }
   }
 };
 </script>
