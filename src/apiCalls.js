@@ -11,6 +11,7 @@ export const getPhoto = async date => {
 };
 
 const cleanUrl = date => {
+    console.log(url, secretKey)
   if (date) {
     const dateFormatted = date.slice(0, 10);
     console.log(dateFormatted);

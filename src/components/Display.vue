@@ -24,7 +24,7 @@ export default {
     border: solid 1px orange;
     justify-content: center;
     img {
-      max-width: 60%;
+      max-height: 60vh;
       height: auto;
       display: block;
       margin: 5% auto;
