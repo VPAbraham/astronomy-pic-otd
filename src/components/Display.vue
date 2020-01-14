@@ -1,10 +1,7 @@
 <template>
   <div class="display">
     <section class="pic-frame">
-      <img
-        class=""
-        src="https://apod.nasa.gov/apod/image/2001/NGC6726_Schedler_960.jpg"
-      />
+      <img class="" v-bind:src="imageUrl" />
     </section>
   </div>
 </template>
@@ -12,7 +9,9 @@
 <script>
 export default {
   name: "Display",
-  props: {}
+  props: {
+    imageUrl: String
+  }
 };
 </script>
 

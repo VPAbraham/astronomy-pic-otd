@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Display imageUrl="this.currentPhoto" />
+    <Display :imageUrl="this.currentPhoto" />
     <section class="date-selector">
       <template>
         <datetime v-model="selectedDate"></datetime>
