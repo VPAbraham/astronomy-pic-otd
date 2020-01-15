@@ -1,7 +1,7 @@
 <template>
   <div class="display">
     <section class="pic-frame">
-      <expandable-image v-bind:src="imageUrl" />
+      <img v-bind:src="imageUrl" />
     </section>
   </div>
 </template>
