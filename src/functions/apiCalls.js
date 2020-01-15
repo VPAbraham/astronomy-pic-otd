@@ -11,10 +11,11 @@ export const getPhoto = async date => {
 export const getMultiplePhotos = async (startDate, endDate) => {
   console.log(startDate, endDate);
   let dateRange = `&start_date=${startDate}`;
-  let urlString = `${url}${secretKey}${dateRange}`
+  let urlString = `${url}${secretKey}${dateRange}`;
   console.log(urlString);
   const data = await (await fetch(urlString)).json();
-  console.log(data)
+  console.log(data);
+  return data;
 };
 
 const cleanUrl = date => {
