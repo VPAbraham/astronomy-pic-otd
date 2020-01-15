@@ -3,6 +3,7 @@
     <div class="photo-container">
       <template v-for="photo in photos">
         <PhotoFrame
+          class="photo-frame"
           :url="photo.hdurl ? photo.hdurl : photo.url"
           :date="photo.date"
           :title="photo.title"
@@ -53,6 +54,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    .photo-frame {
+      margin-top: 2%;
+    }
   }
 }
 </style>

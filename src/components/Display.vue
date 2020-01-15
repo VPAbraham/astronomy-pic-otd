@@ -36,7 +36,7 @@ export default {
       width: 73vw;
       height: 58vh;
       display: block;
-      margin: 3% auto;
+      margin: 2vh auto;
       border-radius: 4px;
       object-fit: cover;
     }
