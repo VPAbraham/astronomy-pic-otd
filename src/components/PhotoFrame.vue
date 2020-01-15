@@ -22,7 +22,9 @@ export default {
     color: white;
   }
   img {
-      max-width: 20vw;
+      width: 20vw;
+      height: 13vw;
+      object-fit: cover;
   }
 }
 </style>
