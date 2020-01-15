@@ -10,8 +10,14 @@ export const getPhoto = async date => {
   return response.hdurl;
 };
 
+export const getMultiplePhotos = async (rawStartDate, rawEndDate) => {
+  let startDate = cleanUrl(rawStartDate);
+  let endDate = cleanUrl(rawEndDate);
+  console.log(startDate, endDate);
+};
+
 const cleanUrl = date => {
-    console.log(url, secretKey)
+  console.log(url, secretKey);
   if (date) {
     const dateFormatted = date.slice(0, 10);
     console.log(dateFormatted);

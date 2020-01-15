@@ -25,9 +25,7 @@ export default {
       currentPhoto: ""
     };
   },
-  methods: {
-    
-  },
+  methods: {},
   mounted() {
     getPhoto()
       .then(res => (this.currentPhoto = res))
