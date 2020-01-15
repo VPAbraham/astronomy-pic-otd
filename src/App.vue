@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <Header />
-    <Home />
+    <router-view/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
-import Home from "@/views/Home.vue";
 
 export default {
   components: {
-    Home,
     Header
+  },
+  mounted() {
+    console.log(process.env.VUE_APP_NASA_API_URL);
   }
 };
 </script>

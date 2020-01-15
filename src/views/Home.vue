@@ -1,28 +1,42 @@
 <template>
   <div class="home">
-    <Display />
+    <Display :imageUrl="this.currentPhoto" />
     <section class="date-selector">
       <template>
-        <b-field class="nav" label="Choose a date to view a different picture.">
-          <b-datepicker
-            placeholder="Type or select a date..."
-            icon="calendar-today"
-            editable
-          >
-          </b-datepicker>
-        </b-field>
+        <datetime v-model="selectedDate"></datetime>
       </template>
     </section>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "@/components/HelloWorld.vue";
+import { Datetime } from "vue-datetime";
 import Display from "@/components/Display.vue";
+import { getPhoto } from "@/apiCalls.js";
 export default {
   name: "home",
   components: {
     Display,
+    Datetime
+  },
+  data: function() {
+    return {
+      selectedDate: null,
+      currentPhoto: ""
+    };
+  },
+  methods: {},
+  mounted() {
+    getPhoto()
+      .then(res => (this.currentPhoto = res))
+      .catch(error => console.error(error));
+  },
+  watch: {
+    selectedDate: function(val) {
+      getPhoto(val)
+        .then(res => (this.currentPhoto = res))
+        .catch(error => console.error(error));
+    }
   }
 };
 </script>
@@ -31,7 +45,7 @@ export default {
 .home {
   color: white;
 }
-.date-selector{
+.date-selector {
   width: 30%;
   background: rgb(199, 199, 199);
   height: 7vh;

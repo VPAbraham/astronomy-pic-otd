@@ -1,15 +1,15 @@
-import Vue from 'vue';
-import Buefy from 'buefy';
-import 'buefy/dist/buefy.css';
-import App from './App.vue';
-import router from './router';
-import store from './store';
+import Vue from "vue";
+import { Datetime } from "vue-datetime";
+import 'vue-datetime/dist/vue-datetime.css'
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
 
 Vue.config.productionTip = false;
-Vue.use(Buefy);
+Vue.use(Datetime);
 
 new Vue({
-  Buefy,
+  Datetime,
   router,
   store,
   render: h => h(App)
