@@ -1,7 +1,9 @@
 <template>
   <div class="display">
     <section class="pic-frame">
-      <img v-bind:src="imageUrl" />
+      <h2>{{ image.title }}</h2>
+      <img v-bind:src="image.hdurl" />
+      <h4>Copyright: {{ image.copyright }}</h4>
     </section>
   </div>
 </template>
@@ -10,24 +12,36 @@
 export default {
   name: "Display",
   props: {
-    imageUrl: String
+    image: Object
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
 .display {
   width: 100%;
   .pic-frame {
     justify-content: center;
+    width: 70vw;
+    margin: auto;
+
+    h2 {}
     img {
-      max-height: 60vh;
-      height: auto;
+      width: 70vw;
+      height: 55vh;
       display: block;
-      margin: 5% auto;
+      margin: auto;
       border-radius: 4px;
+      object-fit: cover;
     }
+    p {
+      font-size: 14px;
+
+      padding: 0 5%;
+      font-family: 'Overpass', sans-serif;
+    }
+    h4 {}
   }
 }
 </style>

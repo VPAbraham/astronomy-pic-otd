@@ -1,11 +1,12 @@
 <template>
   <div class="apod">
-    <Display :imageUrl="this.currentPhoto" />
     <section class="date-selector">
       <template>
-        <datetime v-model="selectedDate"></datetime>
+        <p>To view another photo, enter the date below.</p>
+        <datetime class="date-block" v-model="selectedDate">Click</datetime>
       </template>
     </section>
+    <Display :image="this.currentPhoto" />
   </div>
 </template>
 
@@ -22,7 +23,7 @@ export default {
   data: function() {
     return {
       selectedDate: null,
-      currentPhoto: ""
+      currentPhoto: null
     };
   },
   methods: {},
@@ -47,9 +48,10 @@ export default {
 }
 .date-selector {
   width: 30%;
-  background: rgb(199, 199, 199);
   height: 7vh;
   border-radius: 8px;
+  display: block;
+  margin: 5px auto;
 }
 
 .nav {
