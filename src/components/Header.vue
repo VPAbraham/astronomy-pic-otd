@@ -29,7 +29,7 @@ export default {
 <style scoped lang="scss">
 .header {
   background: rgb(233, 233, 233);
-  height: 12vh;
+  min-height: 12vh;
   display: flex;
   .left-header {
     display: flex;

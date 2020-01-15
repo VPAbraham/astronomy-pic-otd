@@ -1,6 +1,6 @@
 <template>
   <div class="photo-frame">
-    <img :src="url"/>
+    <img :src="url" />
   </div>
 </template>
 
@@ -22,9 +22,9 @@ export default {
     color: white;
   }
   img {
-      width: 20vw;
-      height: 13vw;
-      object-fit: cover;
+    width: 20vw;
+    height: 13vw;
+    object-fit: cover;
   }
 }
 </style>

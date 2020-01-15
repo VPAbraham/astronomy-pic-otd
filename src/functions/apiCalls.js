@@ -5,7 +5,7 @@ export const getPhoto = async date => {
   let dateSuffix = cleanUrl(date);
   let urlString = `${url}${secretKey}${dateSuffix}`;
   const response = await (await fetch(urlString)).json();
-  return response.hdurl;
+  return response;
 };
 
 export const getMultiplePhotos = async startDate => {
