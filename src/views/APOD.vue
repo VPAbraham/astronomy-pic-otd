@@ -6,7 +6,8 @@
         <datetime class="date-block" v-model="selectedDate">Click</datetime>
       </template>
     </section>
-    <Display :image="this.currentPhoto" />
+    <img v-if="isLoading" src="@/assets/loading.gif">
+    <Display v-if="!isLoading" :image="this.currentPhoto" />
   </div>
 </template>
 
@@ -23,20 +24,24 @@ export default {
   data: function() {
     return {
       selectedDate: null,
-      currentPhoto: null
+      currentPhoto: null,
+      isLoading: false
     };
   },
   methods: {},
   mounted() {
+    this.isLoading = true;
     getPhoto()
       .then(res => (this.currentPhoto = res))
       .catch(error => console.error(error));
   },
   watch: {
     selectedDate: function(val) {
+      this.isLoading = true;
       getPhoto(val)
         .then(res => (this.currentPhoto = res))
         .catch(error => console.error(error));
+      this.isLoading = false;
     }
   }
 };
