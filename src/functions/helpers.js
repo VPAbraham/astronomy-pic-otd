@@ -6,7 +6,7 @@ export const getCurrentDate = () => {
   const startMonth = dateHelper(startDate.getMonth() + 1);
   const startDay = dateHelper(startDate.getDate());
   const startDateValue = `${startYear}-${startMonth}-${startDay}`;
-  return { startDate: startDateValue};
+  return { startDate: startDateValue };
 };
 
 export const dateHelper = date => {
@@ -17,5 +17,3 @@ export const dateHelper = date => {
     return dateToString;
   }
 };
-
-

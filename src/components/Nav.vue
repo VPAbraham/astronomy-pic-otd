@@ -16,11 +16,8 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .nav {
-  // width: 24.92%;
-  // border: solid 1px silver;
   background: white;
 }
 </style>

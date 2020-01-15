@@ -43,7 +43,7 @@ export default {
     }
     p {
       font-size: 14px;
-      
+
       padding: 0 5%;
       font-family: "Overpass", sans-serif;
     }
