@@ -39,6 +39,7 @@ export default {
       margin: 2vh auto;
       border-radius: 4px;
       object-fit: cover;
+      box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.658);
     }
     p {
       font-size: 14px;

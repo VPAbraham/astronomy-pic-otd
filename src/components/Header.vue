@@ -8,12 +8,14 @@
       </div>
     </section>
     <section class="right-header">
-      <router-link class="today-link" to="/">Today's Picture Only</router-link>
-      |
-      <router-link class="month-link" to="/month_pics">
-        See all pictures from the past month.
-      </router-link>
-      <!-- <router-view /> -->
+      <div>
+        <router-link class="today-link" to="/">Pic of the Day</router-link>
+      </div>
+      <div>
+        <router-link class="month-link" to="/month_pics">
+          Pics of the Month
+        </router-link>
+      </div>
     </section>
   </div>
 </template>
@@ -25,16 +27,17 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 .header {
   background: rgb(233, 233, 233);
   min-height: 12vh;
   display: flex;
+  justify-content: space-between;
   .left-header {
     display: flex;
     margin: auto 0;
-
+    align-self: flex-start;
     img {
       width: 130px;
       height: 130px;
@@ -51,12 +54,25 @@ export default {
     }
   }
   .right-header {
-    margin: auto;
-
-    .month-link,
-    .today-link {
-      font-size: 24px;
+    align-self: center;
+    margin-right: 3%;
+    display: flex;
+    justify-content: space-between;
+    div {
+      background: rgb(158, 158, 158);
+      height: 50px;
+      border-radius: 4px;
+      line-height: 50px;
+      margin: 10px;
+      .month-link,
+      .today-link {
+        font-size: 22px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 600;
+        margin: 7px;
+      }
     }
+   
   }
 }
 </style>

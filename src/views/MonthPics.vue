@@ -1,16 +1,19 @@
 <template>
-  <div class="month-pics">
-    <div class="photo-container">
-      <template v-for="photo in photos">
-        <PhotoFrame
-          class="photo-frame"
-          :url="photo.hdurl ? photo.hdurl : photo.url"
-          :date="photo.date"
-          :title="photo.title"
-          :description="photo.title"
-          :key="photo.date"
-        />
-      </template>
+  <div>
+    <img class="loading" v-if="isLoading" src="@/assets/loading.gif" />
+    <div class="month-pics">
+      <div class="photo-container">
+        <template v-for="photo in photos">
+          <PhotoFrame
+            class="photo-frame"
+            :url="photo.hdurl ? photo.hdurl : photo.url"
+            :date="photo.date"
+            :title="photo.title"
+            :description="photo.title"
+            :key="photo.date"
+          />
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -58,5 +61,11 @@ export default {
       margin-top: 2%;
     }
   }
+}
+.loading {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin: 15vh auto;
 }
 </style>

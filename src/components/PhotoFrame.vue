@@ -25,6 +25,7 @@ export default {
     width: 20vw;
     height: 13vw;
     object-fit: cover;
+    border-radius: 6px;
   }
 }
 </style>

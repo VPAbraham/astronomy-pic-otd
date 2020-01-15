@@ -2,7 +2,7 @@
   <div class="apod">
     <section class="date-selector">
       <template>
-        <p>To view another photo, enter the date below.</p>
+        <p>To view another photo, enter the date.</p>
         <datetime class="date-block" v-model="selectedDate">Click</datetime>
       </template>
     </section>
@@ -48,12 +48,13 @@ export default {
   margin-top: 3vh;
 }
 .date-selector {
-  width: 30%;
+  width: 22%;
   height: 7vh;
   border-radius: 8px;
   display: block;
   margin: 5px auto;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .nav {
