@@ -8,8 +8,8 @@ export const getPhoto = async date => {
   return response.hdurl;
 };
 
-export const getMultiplePhotos = async (startDate, endDate) => {
-  console.log(startDate, endDate);
+export const getMultiplePhotos = async startDate => {
+  console.log(startDate);
   let dateRange = `&start_date=${startDate}`;
   let urlString = `${url}${secretKey}${dateRange}`;
   console.log(urlString);

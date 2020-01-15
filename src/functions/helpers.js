@@ -1,17 +1,12 @@
 export const getCurrentDate = () => {
   const endDate = Date.now();
-  const newEndDate = new Date(endDate);
-  const endYear = newEndDate.getFullYear().toString();
-  const endMonth = checkDateLength(newEndDate.getMonth() + 1);
-  const endDay = checkDateLength(newEndDate.getDate());
-  const endDateReturn = `${endYear}-${endMonth}-${endDay}`;
   const startDate = endDate - 2592000000;
   const newStartDate = new Date(startDate);
   const startYear = newStartDate.getFullYear().toString();
   const startMonth = checkDateLength(newStartDate.getMonth() + 1);
   const startDay = checkDateLength(newStartDate.getDate());
-  const startDateReturn = `${startYear}-${startMonth}-${startDay}`;
-  return { startDate: startDateReturn, endDate: endDateReturn };
+  const startDateValue = `${startYear}-${startMonth}-${startDay}`;
+  return { startDate: startDateValue};
 };
 
 export const checkDateLength = date => {

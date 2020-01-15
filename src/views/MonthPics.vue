@@ -26,15 +26,15 @@ export default {
   },
   data: function() {
     return {
-      dateRange: {},
+      startDate: {},
       photos: [],
       isLoading: false
     };
   },
   mounted() {
     this.isLoading = true;
-    this.dateRange = getCurrentDate();
-    const { startDate, endDate } = this.dateRange;
+    this.startDate = getCurrentDate();
+    const { startDate, endDate } = this.startDate;
     getMultiplePhotos(startDate, endDate)
       .then(res => (this.photos = res))
       .catch(error => console.error(error));
