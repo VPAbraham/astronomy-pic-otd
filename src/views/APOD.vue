@@ -2,11 +2,12 @@
   <div class="apod">
     <section class="date-selector">
       <template>
-        <p>To view another photo, enter the date below.</p>
+        <p>To view another photo, enter the date.</p>
         <datetime class="date-block" v-model="selectedDate">Click</datetime>
       </template>
     </section>
-    <Display :image="this.currentPhoto" />
+    <img v-if="isLoading" src="@/assets/loading.gif">
+    <Display v-if="!isLoading" :image="this.currentPhoto" />
   </div>
 </template>
 
@@ -23,20 +24,24 @@ export default {
   data: function() {
     return {
       selectedDate: null,
-      currentPhoto: null
+      currentPhoto: null,
+      isLoading: false
     };
   },
   methods: {},
   mounted() {
+    this.isLoading = true;
     getPhoto()
       .then(res => (this.currentPhoto = res))
       .catch(error => console.error(error));
   },
   watch: {
     selectedDate: function(val) {
+      this.isLoading = true;
       getPhoto(val)
         .then(res => (this.currentPhoto = res))
         .catch(error => console.error(error));
+      this.isLoading = false;
     }
   }
 };
@@ -45,13 +50,16 @@ export default {
 <style lang="scss">
 .apod {
   color: white;
+  margin-top: 3vh;
 }
 .date-selector {
-  width: 30%;
+  width: 22%;
   height: 7vh;
   border-radius: 8px;
   display: block;
   margin: 5px auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .nav {
