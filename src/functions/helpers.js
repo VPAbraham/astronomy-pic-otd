@@ -1,6 +1,5 @@
 export const getCurrentDate = () => {
   const endDate = Date.now();
-  console.log(endDate);
   const newEndDate = new Date(endDate);
   const endYear = newEndDate.getFullYear().toString();
   const endMonth = checkDateLength(newEndDate.getMonth() + 1);

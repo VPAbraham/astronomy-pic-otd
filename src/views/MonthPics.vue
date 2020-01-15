@@ -6,16 +6,21 @@
 
 <script>
 import { getCurrentDate } from "@/functions/helpers.js";
+import { getMultiplePhotos } from "@/functions/apiCalls.js";
 
 export default {
   name: "MonthPics",
   data: function() {
     return {
-      dateRange: {}
+      dateRange: {},
     };
   },
   mounted() {
     this.dateRange = getCurrentDate();
+    const { startDate, endDate } = this.dateRange;
+    getMultiplePhotos(startDate, endDate);
+  },
+  methods: {
   }
 };
 </script>
