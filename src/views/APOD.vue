@@ -12,7 +12,7 @@
 <script>
 import { Datetime } from "vue-datetime";
 import Display from "@/components/Display.vue";
-import { getPhoto } from "@/apiCalls.js";
+import { getPhoto } from "@/functions/apiCalls.js";
 export default {
   name: "APOD",
   components: {

@@ -27,7 +27,7 @@ export default {
 }
 
 html {
-  background: rgb(19, 19, 19);
+  background: rgb(44, 44, 44);
 }
 
 #app {

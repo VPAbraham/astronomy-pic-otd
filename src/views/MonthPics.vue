@@ -1,9 +1,12 @@
 <template>
-  <p>hi</p>
+  <div class="month-pics"></div>
 </template>
 
-<script>
+<script> 
 export default {
   name: "MonthPics"
 };
 </script>
+<style lang="scss">
+
+</style>
