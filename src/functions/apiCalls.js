@@ -4,23 +4,23 @@ const secretKey = process.env.VUE_APP_NASA_API_KEY;
 export const getPhoto = async date => {
   let dateSuffix = cleanUrl(date);
   let urlString = `${url}${secretKey}${dateSuffix}`;
-  console.log(urlString);
   const response = await (await fetch(urlString)).json();
-  console.log(response.hdurl);
   return response.hdurl;
 };
 
-export const getMultiplePhotos = async (rawStartDate, rawEndDate) => {
-  let startDate = cleanUrl(rawStartDate);
-  let endDate = cleanUrl(rawEndDate);
-  console.log(startDate, endDate);
+export const getMultiplePhotos = async startDate => {
+  console.log(startDate);
+  let dateRange = `&start_date=${startDate}`;
+  let urlString = `${url}${secretKey}${dateRange}`;
+  console.log(urlString);
+  const data = await (await fetch(urlString)).json();
+  console.log(data);
+  return data;
 };
 
 const cleanUrl = date => {
-  console.log(url, secretKey);
   if (date) {
     const dateFormatted = date.slice(0, 10);
-    console.log(dateFormatted);
     let dateSuffix = `&date=${dateFormatted}`;
     return dateSuffix;
   } else {

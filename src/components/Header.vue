@@ -10,7 +10,7 @@
     <section class="right-header">
       <router-link class="today-link" to="/">Today's Picture Only</router-link>
       |
-      <router-link class="month-link" to="/about">
+      <router-link class="month-link" to="/month_pics">
         See all pictures from the past month.
       </router-link>
       <!-- <router-view /> -->

@@ -1,20 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import APOD from "../views/APOD.vue";
+import MonthPics from "../views/MonthPics.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: Home
+    name: "APOD",
+    component: APOD
   },
   {
-    path: "/about",
-    name: "about",
-    component: About
+    path: "/month_pics",
+    name: "MonthPics",
+    component: MonthPics
   }
 ];
 

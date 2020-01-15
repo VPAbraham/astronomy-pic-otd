@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="apod">
     <Display :imageUrl="this.currentPhoto" />
     <section class="date-selector">
       <template>
@@ -12,9 +12,9 @@
 <script>
 import { Datetime } from "vue-datetime";
 import Display from "@/components/Display.vue";
-import { getPhoto } from "@/apiCalls.js";
+import { getPhoto } from "@/functions/apiCalls.js";
 export default {
-  name: "home",
+  name: "APOD",
   components: {
     Display,
     Datetime
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
-.home {
+.apod {
   color: white;
 }
 .date-selector {
