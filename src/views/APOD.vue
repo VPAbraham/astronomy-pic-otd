@@ -45,6 +45,7 @@ export default {
 <style lang="scss">
 .apod {
   color: white;
+  margin-top: 3vh;
 }
 .date-selector {
   width: 30%;
@@ -52,6 +53,7 @@ export default {
   border-radius: 8px;
   display: block;
   margin: 5px auto;
+  display: flex;
 }
 
 .nav {
