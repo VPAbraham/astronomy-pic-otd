@@ -6,9 +6,11 @@ This application is built in Vue, utilizing the NASA image API to dynamically di
 - Webpack
 - Vue datetime library
 - Vue router
-- Vuex
+- ESLint
 - Heroku
 
+### Deployment:
+[View the deployed project here.](https://astronomy-pic-otd.herokuapp.com/#/)
 ### Planning
 This project was built to spec for a Turing School project, requiring that images be displayed from the NASA APOD API but with little else in terms of requirements. The layout draws inspiration from some common photo gallery sites.
 
