@@ -8,8 +8,11 @@
       </div>
     </section>
     <section class="right-header">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link class="today-link" to="/">Today's Picture Only</router-link>
+      |
+      <router-link class="month-link" to="/about">
+        See all pictures from the past month.
+      </router-link>
       <!-- <router-view /> -->
     </section>
   </div>
@@ -49,6 +52,11 @@ export default {
   }
   .right-header {
     margin: auto;
+
+    .month-link,
+    .today-link {
+      font-size: 24px;
+    }
   }
 }
 </style>
