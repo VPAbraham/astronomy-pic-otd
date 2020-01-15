@@ -1,15 +1,16 @@
 <template>
   <div class="month-pics">
-    <h1>THIS IS MONTH PICS</h1>
-    <template v-for="photo in photos">
-      <PhotoFrame
-        :url="photo.hdurl ? photo.hdurl : photo.url"
-        :date="photo.date"
-        :title="photo.title"
-        :description="photo.title"
-        :key="photo.date"
-      />
-    </template>
+    <div class="photo-container">
+      <template v-for="photo in photos">
+        <PhotoFrame
+          :url="photo.hdurl ? photo.hdurl : photo.url"
+          :date="photo.date"
+          :title="photo.title"
+          :description="photo.title"
+          :key="photo.date"
+        />
+      </template>
+    </div>
   </div>
 </template>
 
@@ -48,9 +49,10 @@ export default {
 </script>
 <style lang="scss">
 .month-pics {
-  h1 {
-    font-size: 100px;
-    color: white;
+  .photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 </style>

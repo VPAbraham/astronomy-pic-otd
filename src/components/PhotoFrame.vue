@@ -1,14 +1,18 @@
 <template>
   <div class="photo-frame">
-    <h1>FRAME</h1>
-    <img />
+    <img :src="url"/>
   </div>
 </template>
 
 <script>
 export default {
   name: "PhotoFrame",
-  props: {}
+  props: {
+    url: String,
+    date: String,
+    title: String,
+    description: String
+  }
 };
 </script>
 <style lang="scss">
@@ -16,6 +20,9 @@ export default {
   h1 {
     font-size: 80px;
     color: white;
+  }
+  img {
+      max-width: 20vw;
   }
 }
 </style>
