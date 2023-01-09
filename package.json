@@ -12,7 +12,7 @@
     "buefy": "^0.8.9",
     "core-js": "^3.4.4",
     "express": "^4.17.1",
-    "luxon": "^1.21.3",
+    "luxon": "^2.5.2",
     "serve-static": "^1.14.1",
     "vue": "^2.6.10",
     "vue-datetime": "^1.0.0-beta.11",
